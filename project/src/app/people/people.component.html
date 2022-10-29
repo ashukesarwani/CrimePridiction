@@ -1,0 +1,33 @@
+<div class="btn-group" class="d-flex justify-content-center" role="group" >
+    <button class="btn btn-outline-primary" routerLink="../profile" >profile</button>
+    <button class="btn btn-outline-primary" (click)="logout()" routerLink="../login" >Logout</button>
+</div>
+
+<div>    
+    <table class="table table-striped">
+        <thead >
+            <tr>
+                <th class="">#</th>
+                <th class="">Profile</th>
+                <th class="">Name</th>
+                <th class="">Email</th>
+                <th class=""></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let people of peopleInfo; index as i">
+                <th class="">{{ i + 1 }} </th>
+                <td class="">
+                    <img 
+                        src="http://localhost:7000/profilePic/{{people.profile}}"
+                        class="me-2" class="rounded-lg"
+                        width="50" height="50"
+                    />
+                </td>
+                <td style="text-transform:uppercase">{{people.name}}</td>
+                <td style="text-transform:uppercase">{{people.email}}</td>
+                <td><button class="btn btn-primary" ></button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

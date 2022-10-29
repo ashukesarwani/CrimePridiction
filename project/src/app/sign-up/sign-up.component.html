@@ -1,0 +1,11 @@
+<form #userForm="ngForm" >
+    <img [src]="img" width="200" height="200"><br>
+    <input type="file" (change)="image($event)"><br>
+    name<br>
+    <input type="text" name="name" ngModel><br>
+    email<br>
+    <input type="email" name="email" ngModel><br>
+    password<br>
+    <input type="password" name="password" ngModel><br>
+    <button (click)="signUp(userForm.value)" class="btn btn-primary" routerLink="../profile">SignUp</button>
+</form>

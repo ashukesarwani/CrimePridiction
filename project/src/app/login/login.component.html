@@ -1,0 +1,28 @@
+
+<h2>Admin Login Form</h2>
+
+<form action="/action_page.php" method="post">
+  <div class="imgcontainer">
+    <img src="./assets/emblem.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <form #userForm ="ngForm"  >
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" ngModel>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" ngModel>
+        
+    <button type="submit"  (click)="login(userForm.value)" routerLink="../profile">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+    </form>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw"><a href="D:\Mini Project\Crime prediction\Admin\forgot pass.html">Forgot password?</a></span>
+  </div>
+</form>
